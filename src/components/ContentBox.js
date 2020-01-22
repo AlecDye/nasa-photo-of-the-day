@@ -13,16 +13,21 @@ export default function ContentBox() {
         axios
             .get("https://api.nasa.gov/planetary/apod?api_key=rdr7WYjvlFpC9nENENEnOhGPPhA68JaPpIch5Q6l")
             .then(response => {
-                console.log(response)
-                // setPhoto(response.data);
+                // console.log(response)
+                setPhoto(response.data);
             })
             .catch(error => {
                 console.log("Data is not returning", error)
             });
     }, []);
     return (
-        <div className="item">
-            <h2>{photo.title}</h2>
+        <div className="photo">
+            <ContentItem
+                url={photo.url}
+                title={photo.title}
+                explanation={photo.explanation}
+                copyright={photo.copyright}
+            />
         </div>
     );
 }
