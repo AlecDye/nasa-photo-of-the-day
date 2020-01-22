@@ -12,6 +12,7 @@ const ContentItem = props => {
             />
             <div className="image-text">
                 <h2>{props.title}</h2>
+                <p>Courtesy: {props.copyright}</p>
                 <p>{props.explanation}</p>
             </div>
         </div>
