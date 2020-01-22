@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // importing ContentItem
 import ContentItem from "./ContentItem";
 // importing API
-import axis from "axios";
+import axios from "axios";
 
 // defining useState within function
 export default function ContentBox() {
@@ -14,7 +14,7 @@ export default function ContentBox() {
             .get("https://api.nasa.gov/planetary/apod?api_key=rdr7WYjvlFpC9nENENEnOhGPPhA68JaPpIch5Q6l")
             .then(response => {
                 console.log(response)
-                // setPhoto(response);
+                // setPhoto(response.data);
             })
             .catch(error => {
                 console.log("Data is not returning", error)
@@ -22,11 +22,7 @@ export default function ContentBox() {
     }, []);
     return (
         <div className="item">
-            {photo.map(item => {
-                return (
-                    <ContentItem />
-                )
-            })}
+            <h2>{photo.title}</h2>
         </div>
     );
 }
