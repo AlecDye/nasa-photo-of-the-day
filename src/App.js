@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="ContentBox">
-        <ContentBox />WORDS
+        <ContentBox />
       </div>
     </div>
   );
