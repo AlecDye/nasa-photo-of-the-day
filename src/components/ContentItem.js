@@ -1,10 +1,11 @@
 import React from "react";
 
 // setting up structure
-const ContentItem = () => {
+const ContentItem = props => {
     return (
-        <>
-        </>
+        <div className="content-item">
+            <p>STUFF and THINGS</p>
+        </div>
     );
 };
 
