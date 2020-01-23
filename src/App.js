@@ -2,15 +2,21 @@ import React from "react";
 import HeaderBar from "./components/HeaderBar";
 import MainContainer from "./components/MainContainer/MainContainer";
 import FooterBar from "./components/FooterBar";
+import styled from "styled-components";
 import "./App.css";
+
+const AppContainer = styled.div`
+  max-width: 100%;
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <AppContainer className="App">
       <HeaderBar />
       <MainContainer />
       <FooterBar />
-    </div>
+    </AppContainer>
   );
 }
 

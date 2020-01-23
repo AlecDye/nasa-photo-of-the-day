@@ -10,15 +10,13 @@ export default function MainContainer() {
         axios
             .get("https://api.nasa.gov/planetary/apod?api_key=rdr7WYjvlFpC9nENENEnOhGPPhA68JaPpIch5Q6l")
             .then(response => {
-                console.log(response)
+                // console.log(response)
                 setPhoto(response.data)
             })
             .catch(error => {
                 console.log("Data not returning", error)
             })
     }, []);
-    //TODO: pass data into TextCard
-    //TODO: display image as background in div MainContainer?
     return (
         <div className="image-wrapper">
             <img

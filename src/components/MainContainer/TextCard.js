@@ -1,8 +1,10 @@
 import React from "react";
+import styled from "styled-components";
 
-// structure
+
+
 const TextCard = props => {
-    console.log(props);
+    // console.log(props);
     return (
         <div className="text-card">
             <h2>{props.title}</h2>
