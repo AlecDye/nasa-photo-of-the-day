@@ -21,7 +21,16 @@ export default function MainContainer() {
     //TODO: display image as background in div MainContainer?
     return (
         <div className="image-wrapper">
-            <TextCard />
+            <img
+                alt="Distant stars in space"
+                className="space-photo"
+                src={photo.url}
+            />
+            <TextCard
+                title={photo.title}
+                explanation={photo.explanation}
+                copyright={photo.copyright}
+            />
         </div>
     );
 }
