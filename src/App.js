@@ -1,13 +1,15 @@
 import React from "react";
+import HeaderBar from "./components/HeaderBar";
+import MainContainer from "./components/MainContainer/MainContainer";
+import FooterBar from "./components/FooterBar";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <HeaderBar />
+      <MainContainer />
+      <FooterBar />
     </div>
   );
 }
