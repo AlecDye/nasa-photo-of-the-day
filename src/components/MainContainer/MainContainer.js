@@ -18,6 +18,7 @@ export default function MainContainer() {
             })
     }, []);
     //TODO: pass data into TextCard
+    //TODO: display image as background in div MainContainer?
     return (
         <div className="image-wrapper">
             <TextCard />
