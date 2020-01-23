@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import TextCard from "./TextCard";
 import axios from "axios";
+import styled from "styled-components";
+
+const SpaceImage = styled.img`
+    width: 100%;
+    height: auto;
+`;
 
 export default function MainContainer() {
     const [photo, setPhoto] = useState([]);
@@ -18,8 +24,8 @@ export default function MainContainer() {
             })
     }, []);
     return (
-        <div className="image-wrapper">
-            <img
+        <div className="main-container">
+            <SpaceImage
                 alt="Distant stars in space"
                 className="space-photo"
                 src={photo.url}
