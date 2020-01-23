@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-//TODO: build TextCard component and import
-// import TextCard from "./TextCard";
+import TextCard from "./TextCard";
 import axios from "axios";
 
 export default function MainContainer() {
@@ -21,8 +20,7 @@ export default function MainContainer() {
     //TODO: pass data into TextCard
     return (
         <div className="image-wrapper">
-
-            {/* <TextCard/> */}
+            <TextCard />
         </div>
     );
 }
