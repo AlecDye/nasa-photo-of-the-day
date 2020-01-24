@@ -3,12 +3,19 @@ import TextCard from "./TextCard";
 import axios from "axios";
 import styled from "styled-components";
 
-const SpaceImage = styled.img`
+// Thank you TL Dustin for this fix!
+const SpaceImage = styled.div`
     width: 100%;
-    height: auto;
+    height: 100vh;
+    background-image: url(${props => props.imgSrc !== undefined ? props.imgSrc : null});
+    background-repeat: no repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
 `;
 
-export default function MainContainer() {
+export default function MainContainer(props) {
     const [photo, setPhoto] = useState([]);
 
     // API request
@@ -28,7 +35,7 @@ export default function MainContainer() {
             <SpaceImage
                 alt="Distant stars in space"
                 className="space-photo"
-                src={photo.url}
+                imgSrc={photo.url}
             />
             <TextCard
                 title={photo.title}

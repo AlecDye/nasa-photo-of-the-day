@@ -5,6 +5,8 @@ const SpaceFooter = styled.footer`
     max-width: 100%;
     padding-top: 0.4rem;
     padding-bottom: 1.6rem;
+    position: absolute;
+    bottom: 0;
 `;
 
 const FooterBar = props => {
