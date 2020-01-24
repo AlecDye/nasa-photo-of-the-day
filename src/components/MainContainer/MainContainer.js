@@ -1,8 +1,23 @@
 import React, { useState, useEffect } from "react";
 import TextCard from "./TextCard";
 import axios from "axios";
+import styled from "styled-components";
 
-export default function MainContainer() {
+// Thank you TL Dustin for this fix!
+const SpaceImage = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-image: url(${props => props.imgSrc !== undefined ? props.imgSrc : null});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+`;
+
+export default function MainContainer(props) {
     const [photo, setPhoto] = useState([]);
 
     // API request
@@ -10,21 +25,19 @@ export default function MainContainer() {
         axios
             .get("https://api.nasa.gov/planetary/apod?api_key=rdr7WYjvlFpC9nENENEnOhGPPhA68JaPpIch5Q6l")
             .then(response => {
-                console.log(response)
+                // console.log(response)
                 setPhoto(response.data)
             })
             .catch(error => {
                 console.log("Data not returning", error)
             })
     }, []);
-    //TODO: pass data into TextCard
-    //TODO: display image as background in div MainContainer?
     return (
-        <div className="image-wrapper">
-            <img
+        <div className="main-container">
+            <SpaceImage
                 alt="Distant stars in space"
                 className="space-photo"
-                src={photo.url}
+                imgSrc={photo.url}
             />
             <TextCard
                 title={photo.title}

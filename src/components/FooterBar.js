@@ -1,10 +1,25 @@
 import React from "react";
+import styled from "styled-components";
+
+const SpaceFooter = styled.footer`
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-top: 0.6rem;
+    padding-bottom: 1.4rem;
+`;
+
+const Disclaimer = styled.p`
+    font-size: 0.8rem;
+    padding-right: 8rem;
+    text-align: right;
+`;
 
 const FooterBar = props => {
     return (
-        <footer>
-            <p>All images provided by NASA. Images belong to original copyright holders.</p>
-        </footer>
+        <SpaceFooter>
+            <Disclaimer>All images provided by NASA - Images belong to original copyright holders.</Disclaimer>
+        </SpaceFooter>
     );
 }
 
