@@ -4,17 +4,13 @@ import styled from "styled-components";
 const SpaceHeader = styled.header`
     position: absolute;
     top: 0;
-    padding-top: 1rem;
-    padding-bottom: 0.4rem;
-    font-size: 1.3rem;
+    margin-left: 28%;
+    font-size: 1.4rem;
 `;
 
 const HeaderBar = () => {
     return (
         <SpaceHeader>
-            <div>
-                <img className="logo" src="/icons/icons8-nasa.svg" alt="" />
-            </div>
             <h1>NASA's Photo of the Day</h1>
         </SpaceHeader >
     );

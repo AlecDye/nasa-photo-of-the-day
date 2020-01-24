@@ -11,14 +11,14 @@ const SpaceFooter = styled.footer`
 
 const Disclaimer = styled.p`
     font-size: 0.8rem;
-    padding-left: 3rem;
-    text-align: left;
+    padding-right: 7.5rem;
+    text-align: right;
 `;
 
 const FooterBar = props => {
     return (
         <SpaceFooter>
-            <Disclaimer>All images provided by NASA. Images belong to original copyright holders.</Disclaimer>
+            <Disclaimer>All images provided by NASA - Images belong to original copyright holders.</Disclaimer>
         </SpaceFooter>
     );
 }

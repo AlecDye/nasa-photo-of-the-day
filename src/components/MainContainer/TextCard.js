@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const TextCardContainer = styled.div`
-    border: 1px solid white;
     width: 35%;
     margin-top: 17%;
     margin-left: 60%;
+    filter: blur(4px);
+    opacity: 0.5;
+    &:hover{
+        filter: blur(0);
+        opacity: 1;
+    }
 `;
 
 const ImageTitle = styled.h2`
