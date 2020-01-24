@@ -11,7 +11,7 @@ const SpaceFooter = styled.footer`
 
 const Disclaimer = styled.p`
     font-size: 0.8rem;
-    padding-right: 7.5rem;
+    padding-right: 8rem;
     text-align: right;
 `;
 

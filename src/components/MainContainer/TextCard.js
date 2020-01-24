@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const TextCardContainer = styled.div`
@@ -10,7 +10,9 @@ const TextCardContainer = styled.div`
     &:hover{
         filter: blur(0);
         opacity: 1;
+        text-shadow: -1px -1px black;
     }
+    
 `;
 
 const ImageTitle = styled.h2`
