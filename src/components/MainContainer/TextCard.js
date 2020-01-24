@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const TextCardContainer = styled.div`
-    display: flex;
-    flex-direction: column;
     width: 40%;
     height: auto;
     backdrop-filter: blur(1px);
     border-radius: 25px;
+    position: absolute;
+    bottom: 10rem; right 10rem;
 `;
 
 const ImageTitle = styled.h2`

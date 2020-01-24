@@ -5,6 +5,8 @@ const SpaceHeader = styled.header`
     max-width: 100%;
     padding-top: 1.6rem;
     padding-bottom: 0.4rem;
+    position: absolute;
+    top: 0;
 `;
 
 const HeaderBar = () => {
