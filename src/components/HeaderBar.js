@@ -12,6 +12,9 @@ const SpaceHeader = styled.header`
 const HeaderBar = () => {
     return (
         <SpaceHeader>
+            <div>
+                <img className="logo" src="/icons/icons8-nasa.svg" alt="" />
+            </div>
             <h1>NASA's Photo of the Day</h1>
         </SpaceHeader >
     );

@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const TextCardContainer = styled.div`
     border: 1px solid white;
-    width: 40%;
-    margin-top: 18%;
-    margin-left: 55%;
+    width: 35%;
+    margin-top: 17%;
+    margin-left: 60%;
 `;
 
 const ImageTitle = styled.h2`
@@ -19,6 +19,8 @@ const TextDescription = styled.p`
 
 const Attribute = styled.p`
     font-size: 0.8rem;
+    text-align: end;
+    padding-right: 2rem;
 `;
 
 const TextCard = props => {
