@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const TextCardContainer = styled.div`
+    border: 1px solid white;
     width: 40%;
-    height: auto;
-    backdrop-filter: blur(1px);
-    border-radius: 25px;
-    position: absolute;
-    bottom: 10rem; right 10rem;
+    margin-top: 18%;
+    margin-left: 55%;
 `;
 
 const ImageTitle = styled.h2`
@@ -15,8 +13,12 @@ const ImageTitle = styled.h2`
 `;
 
 const TextDescription = styled.p`
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-spacing: 1.6px;
+`;
+
+const Attribute = styled.p`
+    font-size: 0.8rem;
 `;
 
 const TextCard = props => {
@@ -25,7 +27,7 @@ const TextCard = props => {
         <TextCardContainer className="text-card">
             <ImageTitle>{props.title}</ImageTitle>
             <TextDescription>{props.explanation}</TextDescription>
-            <p>Courtesy of {props.copyright}</p>
+            <Attribute>Photo courtesy of {props.copyright}</Attribute>
         </TextCardContainer>
     );
 }
